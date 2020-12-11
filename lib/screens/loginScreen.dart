@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:health/model/patient.dart';
 import 'package:health/screens/Register.dart';
 import 'package:health/screens/dashboard.dart';
 import 'package:health/services/services.dart';
@@ -15,10 +16,7 @@ class LoginPage extends StatefulWidget {
 class _State extends State<LoginPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-
-  String email;
-  String password;
-
+  Patient obj;
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +30,9 @@ class _State extends State<LoginPage> {
           ),
         ),
         body: Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(20),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
 
                 Container(
@@ -49,17 +47,19 @@ class _State extends State<LoginPage> {
                     )),
                 Container(
                   padding: EdgeInsets.all(10),
-                  child: TextField(
-                    controller: nameController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'E-mail',
+                    child: TextField(
+                      controller: nameController,
+                      decoration: InputDecoration(
+                        fillColor: Colors.purple,
+                        border: OutlineInputBorder(),
+                        labelText: 'E-mail',
+                      ),
+                      onChanged: (value) {
+                        obj.email = value;
+                      },
                     ),
-                    onChanged: (value) {
-                      email = value;
-                    },
                   ),
-                ),
+
                 Container(
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
                   child: TextField(
@@ -70,7 +70,7 @@ class _State extends State<LoginPage> {
                       labelText: 'Password',
                     ),
                     onChanged: (value) {
-                      password = value;
+                      obj.password = value;
                     },
                   ),
                 ),
@@ -86,7 +86,7 @@ class _State extends State<LoginPage> {
                         fontSize: 25,
                       ),),
                     onPressed: () async {
-                      Auth auth = Auth(email, password);
+                      Auth auth = Auth();
                       dynamic User = await auth.SignIN();
 
                       if (User != null) {

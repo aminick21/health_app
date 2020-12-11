@@ -29,6 +29,7 @@ class _DashBoardState extends State<DashBoard> {
               ),
               body: Column(mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(height: 30,),
                     Container(
                       child: Center(
                         child: Image(image: AssetImage('images/picHead.jpg'),),
@@ -38,9 +39,9 @@ class _DashBoardState extends State<DashBoard> {
                     Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: EdgeInsets.all(5),
                           height: 130,
-                          width: 180,
+                          width: 200,
                           decoration: BoxDecoration(
                             borderRadius:BorderRadius.circular(30),
                             // color: Colors.white,
@@ -50,9 +51,9 @@ class _DashBoardState extends State<DashBoard> {
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
                             },
-                            child: Text('Appointment',
+                            child: Text('Book Appointment',
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 24,
                                   fontFamily: 'Comfortaa'
                               ),),
                           )),
@@ -60,9 +61,9 @@ class _DashBoardState extends State<DashBoard> {
 
 
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: EdgeInsets.all(5),
                           height: 130,
-                          width: 180,
+                          width: 200,
                           decoration: BoxDecoration(
                             borderRadius:BorderRadius.circular(30),
                             // color: Colors.white,
@@ -72,9 +73,9 @@ class _DashBoardState extends State<DashBoard> {
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
                             },
-                            child: Text('Appointment',
+                            child: Text('Video Call',
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 24,
                                   fontFamily: 'Comfortaa'
                               ),),
                           )),
@@ -89,9 +90,9 @@ class _DashBoardState extends State<DashBoard> {
                       children: [
 
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: EdgeInsets.all(5),
                           height: 130,
-                          width: 180,
+                          width: 200,
                           decoration: BoxDecoration(
                             borderRadius:BorderRadius.circular(30),
                             // color: Colors.white,
@@ -101,9 +102,9 @@ class _DashBoardState extends State<DashBoard> {
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
                             },
-                            child: Text('Appointment',
+                            child: Text('Nearby Hospitals',
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 24,
                                   fontFamily: 'Comfortaa'
                               ),),
                           )),
@@ -115,9 +116,9 @@ class _DashBoardState extends State<DashBoard> {
 
 
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: EdgeInsets.all(5),
                           height: 130,
-                          width: 180,
+                          width: 200,
                           decoration: BoxDecoration(
                             borderRadius:BorderRadius.circular(30),
                             // color: Colors.white,
@@ -127,9 +128,9 @@ class _DashBoardState extends State<DashBoard> {
                             onPressed: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
                             },
-                            child: Text('Appointment',
+                            child: Text('My Records',
                               style: TextStyle(
-                                  fontSize: 25,
+                                  fontSize: 24,
                                   fontFamily: 'Comfortaa'
                               ),),
                           )),
@@ -139,7 +140,7 @@ class _DashBoardState extends State<DashBoard> {
                     )
                     ,
 
-                    Container(margin: EdgeInsets.all(15),
+                    Container(margin: EdgeInsets.all(5),
                       height: 130,
                       width: 400,
                       decoration: BoxDecoration(
@@ -148,7 +149,7 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                       child: Center(child: Text('Prescription',
                         style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 38,
                             fontFamily: 'Comfortaa'
                         ),)),
                     ),
