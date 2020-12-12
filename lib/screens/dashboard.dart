@@ -20,10 +20,10 @@ class _DashBoardState extends State<DashBoard> {
           Expanded(
             child: Scaffold(
               backgroundColor: Colors.white,
-              appBar: AppBar(title: Text('',
+              appBar: AppBar(title: Text('Dashboard',
                 style: TextStyle(
                   fontFamily: 'Comfortaa',
-                  fontSize: 40,
+                  fontSize: 30,
                   color: Colors.white,
                 ),
               ),
@@ -34,7 +34,7 @@ class _DashBoardState extends State<DashBoard> {
               // ),
                 child: Column(mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      SizedBox(height: 30,),
+                      SizedBox(height: 20,),
                       Container(
                         child: Center(
                           child: Image(image: AssetImage('images/picHead.jpg'),),
@@ -91,6 +91,7 @@ class _DashBoardState extends State<DashBoard> {
 
                         ],
                       ),
+                      SizedBox(height: 10,),
                       Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
 
@@ -133,7 +134,7 @@ class _DashBoardState extends State<DashBoard> {
                               onPressed: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
                               },
-                              child: Text('My Records',
+                              child: Text('My Reports',
                                 style: TextStyle(
                                     fontSize: 24,
                                     fontFamily: 'Comfortaa'
@@ -144,7 +145,7 @@ class _DashBoardState extends State<DashBoard> {
 
                       )
                       ,
-
+                      SizedBox(height: 10,),
                       Container(margin: EdgeInsets.all(5),
                         height: 130,
                         width: 400,
