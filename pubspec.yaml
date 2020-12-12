@@ -54,6 +54,7 @@ flutter:
     - images/picProfile.png
     - images/picHead.jpg
     - images/bg.jpg
+    - images/pic3.jpg
 
   fonts:
     - family: FjallaOne

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:health/nearbystore/nearbystore.dart';
+import 'package:health/vc/videocall.dart';
 
-import 'appointment.dart';
+import 'appointment/appointment.dart';
 
 class DashBoard extends StatefulWidget {
   @override
@@ -27,137 +29,141 @@ class _DashBoardState extends State<DashBoard> {
               ),
                 backgroundColor: Colors.purple,
               ),
-              body: Column(mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(height: 30,),
-                    Container(
-                      child: Center(
-                        child: Image(image: AssetImage('images/picHead.jpg'),),
+              body: Container(// decoration: BoxDecoration(
+              //   image: DecorationImage(image: AssetImage('images/bg.jpg')),
+              // ),
+                child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(height: 30,),
+                      Container(
+                        child: Center(
+                          child: Image(image: AssetImage('images/picHead.jpg'),),
+                        ),
                       ),
-                    ),
 
-                    Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(5),
-                          height: 130,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            borderRadius:BorderRadius.circular(30),
-                            // color: Colors.white,
-                            color: Color.fromRGBO(238, 210, 238, 50),
+                      Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            height: 130,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius:BorderRadius.circular(30),
+                              // color: Colors.white,
+                              color: Color.fromRGBO(238, 210, 238, 50),
+                            ),
+                            child: Center(child: FlatButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
+                              },
+                              child: Text('Book Appointment',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'Comfortaa'
+                                ),),
+                            )),
                           ),
-                          child: Center(child: FlatButton(
-                            onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
-                            },
-                            child: Text('Book Appointment',
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  fontFamily: 'Comfortaa'
-                              ),),
-                          )),
-                        ),
 
 
-                        Container(
-                          margin: EdgeInsets.all(5),
-                          height: 130,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            borderRadius:BorderRadius.circular(30),
-                            // color: Colors.white,
-                            color: Color.fromRGBO(238, 210, 238, 50),
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            height: 130,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius:BorderRadius.circular(30),
+                              // color: Colors.white,
+                              color: Color.fromRGBO(238, 210, 238, 50),
+                            ),
+                            child: Center(child: FlatButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Videocall()));
+                              },
+                              child: Text('Video Call',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'Comfortaa'
+                                ),),
+                            )),
                           ),
-                          child: Center(child: FlatButton(
-                            onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
-                            },
-                            child: Text('Video Call',
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  fontFamily: 'Comfortaa'
-                              ),),
-                          )),
-                        ),
 
 
 
 
-                      ],
-                    ),
-                    Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-
-                        Container(
-                          margin: EdgeInsets.all(5),
-                          height: 130,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            borderRadius:BorderRadius.circular(30),
-                            // color: Colors.white,
-                            color: Color.fromRGBO(238, 210, 238, 50),
-                          ),
-                          child: Center(child: FlatButton(
-                            onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
-                            },
-                            child: Text('Nearby Hospitals',
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  fontFamily: 'Comfortaa'
-                              ),),
-                          )),
-                        ),
-
-
-
-
-
-
-                        Container(
-                          margin: EdgeInsets.all(5),
-                          height: 130,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            borderRadius:BorderRadius.circular(30),
-                            // color: Colors.white,
-                            color: Color.fromRGBO(238, 210, 238, 50),
-                          ),
-                          child: Center(child: FlatButton(
-                            onPressed: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
-                            },
-                            child: Text('My Records',
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  fontFamily: 'Comfortaa'
-                              ),),
-                          )),
-                        ),
-                      ],
-
-                    )
-                    ,
-
-                    Container(margin: EdgeInsets.all(5),
-                      height: 130,
-                      width: 400,
-                      decoration: BoxDecoration(
-                        borderRadius:BorderRadius.circular(30),
-                        color: Color.fromRGBO(238, 210, 238, 50),
+                        ],
                       ),
-                      child: Center(child: Text('Prescription',
-                        style: TextStyle(
-                            fontSize: 38,
-                            fontFamily: 'Comfortaa'
-                        ),)),
-                    ),
+                      Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            height: 130,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius:BorderRadius.circular(30),
+                              // color: Colors.white,
+                              color: Color.fromRGBO(238, 210, 238, 50),
+                            ),
+                            child: Center(child: FlatButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>nearby()));
+                              },
+                              child: Text('Nearby Hospitals',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'Comfortaa'
+                                ),),
+                            )),
+                          ),
 
 
 
 
-                  ]
+
+
+                          Container(
+                            margin: EdgeInsets.all(5),
+                            height: 130,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              borderRadius:BorderRadius.circular(30),
+                              // color: Colors.white,
+                              color: Color.fromRGBO(238, 210, 238, 50),
+                            ),
+                            child: Center(child: FlatButton(
+                              onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>Appointment()));
+                              },
+                              child: Text('My Records',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'Comfortaa'
+                                ),),
+                            )),
+                          ),
+                        ],
+
+                      )
+                      ,
+
+                      Container(margin: EdgeInsets.all(5),
+                        height: 130,
+                        width: 400,
+                        decoration: BoxDecoration(
+                          borderRadius:BorderRadius.circular(30),
+                          color: Color.fromRGBO(238, 210, 238, 50),
+                        ),
+                        child: Center(child: Text('Prescription',
+                          style: TextStyle(
+                              fontSize: 38,
+                              fontFamily: 'Comfortaa'
+                          ),)),
+                      ),
+
+
+
+
+                    ]
+                ),
               ),
             ),
           )],),

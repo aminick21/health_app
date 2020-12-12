@@ -16,7 +16,7 @@ class LoginPage extends StatefulWidget {
 class _State extends State<LoginPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  Patient obj;
+  String email,pass;
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +55,7 @@ class _State extends State<LoginPage> {
                         labelText: 'E-mail',
                       ),
                       onChanged: (value) {
-                        obj.email = value;
+                        email = value;
                       },
                     ),
                   ),
@@ -70,7 +70,7 @@ class _State extends State<LoginPage> {
                       labelText: 'Password',
                     ),
                     onChanged: (value) {
-                      obj.password = value;
+                      pass = value;
                     },
                   ),
                 ),
@@ -86,7 +86,7 @@ class _State extends State<LoginPage> {
                         fontSize: 25,
                       ),),
                     onPressed: () async {
-                      Auth auth = Auth();
+                      Auth auth = Auth(email: email,password: pass);
                       dynamic User = await auth.SignIN();
 
                       if (User != null) {
