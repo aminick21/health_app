@@ -5,10 +5,10 @@ import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../global.dart';
 
-class VcContainer extends StatelessWidget {
+class PreContainer extends StatelessWidget {
   final int id;
 
-  const VcContainer({Key key, this.id}) : super(key: key);
+  const PreContainer({Key key, this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +20,7 @@ class VcContainer extends StatelessWidget {
         child: Row(
           children: <Widget>[
             SizedBox(
-                height: 51,
+              height: 51,
             ),
             SizedBox(width: 9),
             Expanded(
@@ -29,17 +29,11 @@ class VcContainer extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("${vc[id].name}",
+                      Text("${preList[id].name}",
                           style:TextStyle(
                             fontSize: 30,
                           )),
-                      Text(
-                        "${vc[id].link}",
-                          style:TextStyle(
-                            fontSize: 15,
-                            color: Colors.green,
-                          )
-                      ),
+
                       Row(
                         children: <Widget>[
 
@@ -48,11 +42,11 @@ class VcContainer extends StatelessWidget {
                     ],
                   ),
                   Column(children: <Widget>[
-                    Text("${vc[id].date}",
+                    Text("${preList[id].date}",
                         style:TextStyle(
                           fontSize: 20,
                         )),
-                    Text("${vc[id].time}",
+                    Text("${preList[id].time}",
                         style:TextStyle(
                           fontSize: 20,
                         )),
@@ -65,5 +59,5 @@ class VcContainer extends StatelessWidget {
           ],
         ));
 
-}
+  }
 }

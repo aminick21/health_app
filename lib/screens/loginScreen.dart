@@ -51,7 +51,8 @@ class _State extends State<LoginPage> {
                       controller: nameController,
                       decoration: InputDecoration(
                         fillColor: Colors.purple,
-                        border: OutlineInputBorder(),
+                        border: OutlineInputBorder(
+                       ),
                         labelText: 'E-mail',
                       ),
                       onChanged: (value) {
@@ -66,7 +67,9 @@ class _State extends State<LoginPage> {
                     obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      enabledBorder: OutlineInputBorder(
+
+                      ),
                       labelText: 'Password',
                     ),
                     onChanged: (value) {

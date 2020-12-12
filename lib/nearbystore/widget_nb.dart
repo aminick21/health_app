@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../screens/appointment/global.dart';
+import '../global.dart';
 import '../details.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import '../screens/appointment/global.dart';
+import '../global.dart';
 
 class nbContainer extends StatelessWidget {
   final int id;

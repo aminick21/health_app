@@ -15,10 +15,23 @@ class MyColors {
       blue = Color(0xff40beee);
 }
 
+class PreInfo{
+  String name,time , date;
+  PreInfo({this.name,this.time,this.date});
+}
+List<PreInfo> preList=[
+  PreInfo(
+      name:'Dr Aryan Yadav',
+      time: '10:30 AM',
+      date: '21 December'
+  ),
+
+];
 class Vcinfo{
   String name,link,time,date;
   Vcinfo({this.name,this.link,this.time,this.date});
 }
+
 
 List<Vcinfo> vc=[
   Vcinfo(

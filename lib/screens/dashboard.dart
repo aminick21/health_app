@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health/nearbystore/nearbystore.dart';
+import 'package:health/precription/pre.dart';
 import 'package:health/vc/videocall.dart';
 
 import 'appointment/appointment.dart';
@@ -59,6 +60,7 @@ class _DashBoardState extends State<DashBoard> {
                               child: Text('Book Appointment',
                                 style: TextStyle(
                                     fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                     fontFamily: 'Comfortaa'
                                 ),),
                             )),
@@ -81,6 +83,7 @@ class _DashBoardState extends State<DashBoard> {
                               child: Text('Video Call',
                                 style: TextStyle(
                                     fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                     fontFamily: 'Comfortaa'
                                 ),),
                             )),
@@ -111,6 +114,7 @@ class _DashBoardState extends State<DashBoard> {
                               child: Text('Nearby Hospitals',
                                 style: TextStyle(
                                     fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                     fontFamily: 'Comfortaa'
                                 ),),
                             )),
@@ -137,6 +141,7 @@ class _DashBoardState extends State<DashBoard> {
                               child: Text('My Reports',
                                 style: TextStyle(
                                     fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                     fontFamily: 'Comfortaa'
                                 ),),
                             )),
@@ -153,11 +158,17 @@ class _DashBoardState extends State<DashBoard> {
                           borderRadius:BorderRadius.circular(30),
                           color: Color.fromRGBO(238, 210, 238, 50),
                         ),
-                        child: Center(child: Text('Prescription',
-                          style: TextStyle(
-                              fontSize: 38,
-                              fontFamily: 'Comfortaa'
-                          ),)),
+                        child: FlatButton(onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Prescription()));
+                        },
+                          child: Center(child: Text('Prescription',
+
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 38,
+                                fontFamily: 'Comfortaa'
+                            ),)),
+                        ),
                       ),
 
 

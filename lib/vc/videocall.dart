@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health/screens/appointment/global.dart';
+import 'package:health/global.dart';
 import 'package:health/vc/widget_vc.dart';
 class Videocall extends StatelessWidget {
   @override

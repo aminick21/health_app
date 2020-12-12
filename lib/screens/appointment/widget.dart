@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'global.dart';
+import '../../global.dart';
 import '../../details.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import 'global.dart';
+import '../../global.dart';
 
 class DoctorContainer extends StatelessWidget {
   final int id;
